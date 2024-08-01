@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Ahmet Deger">
+  <title>Magic Eight Ball</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    const ANSWERS = [
+      'Yes, definitely.',
+      'It is certain.',
+      'No chance.',
+      'Ask again later.',
+      'Most likely.',
+      'Without a doubt.',
+      'Outlook not so good.',
+      'Better not tell you now.'
+    ]
+
+    let isPlaying = true
+
+    while (isPlaying) {
+      let userQuestion = prompt('Hello, I am your fortune teller! Please, ask the question you want to know the answer to.')
+
+      let random = Math.floor(Math.random() * ANSWERS.length);
+
+      alert(ANSWERS[random])
+
+      isPlaying = confirm('Would you like to ask one more question?')
+    }
+  </script>
+</body>
+
+</html>
